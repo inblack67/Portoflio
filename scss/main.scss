@@ -160,6 +160,115 @@ img {
 
 }
 
+
+#about{
+  &-a{
+    
+    .about-info{
+      display: grid;
+      grid-template-areas: 'img bio bio' 'a1 a2 a3';
+      grid-gap: 1rem;
+    }
+    
+    .about-img{
+      grid-area: img;
+    }
+    
+    .about-bio{
+      grid-area: bio;
+      background: $light-color;
+      border-left: 3px solid $primary-color;
+    }
+    
+    .award-1{
+      grid-area: a1;
+    }
+    
+    .award-2{
+      grid-area: a2;
+    }
+    
+    .award-3{
+      grid-area: a3;
+    }
+    
+    .award-1 .fab,
+    .award-2 .fab,
+    .award-3 .fab{
+      color: $primary-color;
+      margin: 1rem;
+    }
+    
+  }
+  
+  &-b{
+    background: $dark-color;
+    color: $light-color;
+    
+    .progress{
+      overflow: hidden;
+      height: 20px;
+      background: $secondary-color;
+      margin-bottom: 0.7rem;
+      
+      div{
+        background: $primary-color;
+        height: 100%;
+      }
+    }
+  }
+  
+  &-c{
+    background: $light-color;
+    
+    .stacks{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      
+      .fab{
+        color: $secondary-color;
+        margin-bottom: 0.5rem;
+      }
+    }
+  }
+  
+  &-d{
+    .clients{
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-gap: 1rem;
+      
+      .client-text{
+        border: 1px solid $secondary-color;
+        padding: 1rem;
+        text-align: center;
+      }
+      
+      img{
+        border-radius: 50%;
+        height: 50px;
+        width: 50px;
+        margin: 1rem;
+      }
+    }
+  }
+  
+}
+
+#work{
+  .projects{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    transition: all 1s;
+    
+    &:hover{
+      background: $primary-color;
+    }
+  }
+  
+}
+
 #footer{
   background: $dark-color;
   color: $secondary-color;
@@ -181,44 +290,4 @@ img {
   }
 
 }
-
-#about{
-  &-a{
-
-    .about-info{
-      display: grid;
-      grid-template-areas: 'img bio bio' 'a1 a2 a3';
-      grid-gap: 1rem;
-    }
-
-    .about-img{
-      grid-area: img;
-    }
-
-    .about-bio{
-      grid-area: bio;
-      background: $light-color;
-      border-left: 3px solid $primary-color;
-    }
-
-    .award-1{
-      grid-area: a1;
-    }
-
-    .award-2{
-      grid-area: a2;
-    }
-
-    .award-3{
-      grid-area: a3;
-    }
-
-    .award-1 .fab,
-    .award-2 .fab,
-    .award-3 .fab{
-      color: $primary-color;
-      margin: 1rem;
-    }
-
-  }
-}
+@import 'media';
